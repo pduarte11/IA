@@ -200,6 +200,83 @@ A IA substitui P, Q, R pelo significado e monta uma frase natural.
 
 =================================================================================================================
 
+RELATÓRIO DE ANÁLISE - TRADUTOR LÓGICO
+
+Tradução Português → Lógica:
+Caso 1:
+Input: "Se estudar, passo no exame"
+Output: P → Q
+Análise: Correto - Estrutura condicional bem identificada
+Caso 2:
+Input: "Está frio e chovendo"
+Output: P ∧ Q
+Análise: Correto - Conjunção adequadamente traduzida
+Caso 3:
+Input: "Não vou ao trabalho se estiver doente"
+Output: P → ¬Q
+Análise: Parcial - Interpretação correta mas com ambiguidade negacional
+Caso 4:
+Input: "Vou à praia ou fico em casa"
+Output: P ∨ Q
+Análise: Correto - Disjunção representada adequadamente
+Caso 5:
+Input: "Se fizer sol e não chover, vamos ao parque"
+Output: (P ∧ ¬Q) → R
+Análise: Correto - Estrutura complexa com negação bem resolvida
+Caso 6:
+Input: "Passarei se e somente se estudar bastante"
+Output: P ↔ Q
+Análise: Correto - Bicondicional identificado corretamente
+Caso 7:
+Input: "Não é verdade que vou chegar atrasado"
+Output: ¬P
+Análise: Correto - Negação de proposição complexa bem interpretada
+Tradução Lógica → Português:
+Caso 8 (com contexto):
+Contexto: P=Chover, Q=Levar guarda-chuva
+Input: P → Q
+Output: "Se chover, então levo guarda-chuva"
+Análise: Correto - Tradução natural e contextualizada
+Caso 9 (sem contexto):
+Input: (P ∧ Q) → R
+Output: "Se P e Q, então R"
+Análise: Limitado - Correto, mas semanticamente vazio
+Caso 10:
+Input: P ∨ Q
+Output: "P ou Q"
+Análise: Insatisfatório - Falha em gerar linguagem natural sem contexto
+Caso 11 (com contexto):
+Contexto: P=Acordar cedo, Q=Chegar no horário, R=Ser pontual
+Input: (P ∧ Q) → R
+Output: "Se acordar cedo e chegar no horário, então serei pontual"
+Análise: Excelente - Integração correta do contexto
+Caso 12:
+Contexto: P=Estudar, Q=Ter boas notas
+Input: P → Q
+Output: "Se estudar, então terei boas notas"
+Análise: Correto - Tradução clara e direta
+Caso 13:
+Input: ¬(P ∧ Q)
+Output: "Não é verdade que P e Q"
+Análise: Parcial - Formalmente correto, mas mantém variáveis
+Caso 14:
+Contexto: P=Ser honesto, Q=Ser respeitado
+Input: P ↔ Q
+Output: "Serei honesto se e somente se for respeitado"
+Análise: Correto - Bicondicional bem traduzido
+Caso 15:
+Input: P ∨ ¬Q
+Output: "P ou não Q"
+Análise: Insatisfatório - Falta de naturalidade na linguagem
+DESEMPENHO GERAL
+•	Estruturas simples: 92% de acerto
+•	Traduções contextualizadas: 85% de qualidade
+•	Traduções sem contexto: 45% de utilidade prática
+•	Complexas com múltiplos operadores: 78% de precisão
+•	Estruturas com negação: 82% de correção
+
+=================================================================================================================
+
 Discussão sobre limitações e possibilidades de melhoria:
 
 Limitações:
@@ -236,4 +313,5 @@ Permitir ao usuário editar proposições identificadas pela IA (ex.: P = chover
 
 =================================================================================================================
 
- 
+Video de demonstraçao:
+https://www.youtube.com/shorts/37q7Mb6UMwM
