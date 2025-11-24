@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyAQtMAbp90yG4IWNRA2osFEFdBtYA_nIps";
+const API_KEY = "AIzaSyBPtaQDy9mgS4D0V0n_5eXRMdxI6ZOVr8E";
 
 
 const inputText = document.getElementById('inputText');
@@ -113,5 +113,6 @@ async function traduzir() {
         btnTraduzir.innerText = "Traduzir";
     }
 }
+
 
 btnTraduzir.addEventListener('click', traduzir);
