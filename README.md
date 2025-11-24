@@ -1,3 +1,6 @@
+OBS: A API KEY PODE SER CONSIDERADA VAZADA PELO GOOGLE JÁ QUE ESTÁ SENDO USADA EM UM CÓDIGO ABERTO, TORNANDO-A INVÁLIDA. ELA SERÁ TROCADA PERIODICAMENTE, MAS EXISTE A CHANCE DE ENCONTRA-LÁ EXIBINDO O ERRO "Your API key was reported as leaked. Please use another API key."
+ 
+ 
  # Tradutor Lógico -- Agente de IA via Navegador
 
   Este projeto implementa um **agente de tradução lógica** capaz de
