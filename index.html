@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente de Lógica - Gemini Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Tradutor Lógico</h1>
+            <p class="subtitle">Agente de IA via Navegador</p>
+        </header>
+
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="modo" value="nl_to_cpc" checked>
+                <span>Português ➡ Lógica</span>
+            </label>
+            <label>
+                <input type="radio" name="modo" value="cpc_to_nl">
+                <span>Lógica ➡ Português</span>
+            </label>
+        </div>
+
+        <div class="input-area">
+            <label id="inputLabel" for="inputText">Digite a frase:</label>
+            
+            <div id="symbolToolbar" class="toolbar hidden">
+                <button class="sym-btn" onclick="inserirSimbolo('→')" title="Implica">→</button>
+                <button class="sym-btn" onclick="inserirSimbolo('↔')" title="Se e somente se">↔</button>
+                <button class="sym-btn" onclick="inserirSimbolo('∧')" title="E">∧</button>
+                <button class="sym-btn" onclick="inserirSimbolo('∨')" title="Ou">∨</button>
+                <button class="sym-btn" onclick="inserirSimbolo('¬')" title="Negação">¬</button>
+                <div class="separator"></div>
+                <button class="sym-btn" onclick="inserirSimbolo('(')">(</button>
+                <button class="sym-btn" onclick="inserirSimbolo(')')">)</button>
+            </div>
+
+            <textarea id="inputText" rows="3" placeholder="Ex: Se chover, a rua molha."></textarea>
+
+            <div id="contextBox" class="hidden">
+                <label for="contextInput">Contexto (Significado das variáveis):</label>
+                <input type="text" id="contextInput" placeholder="Ex: P=Estudar, Q=Passar na prova">
+            </div>
+        </div>
+
+        <button id="btnTraduzir">Traduzir</button>
+
+        <div id="resultArea" class="result-box hidden">
+            <span class="result-label">Resultado da IA:</span>
+            <p id="outputText">...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
